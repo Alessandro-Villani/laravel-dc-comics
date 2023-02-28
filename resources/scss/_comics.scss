@@ -1,0 +1,71 @@
+#comics {
+    background-color: $secondary-background;
+    min-height: 150px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+        text-align: start;
+    }
+
+    h3 {
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        background-color: $main-background;
+        color: white;
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+    }
+
+    p {
+        color: white;
+        font-size: 30px;
+        line-height: 150px;
+    }
+
+    .card {
+        flex-basis: calc(100% / 6);
+
+    }
+
+    figure {
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        position: relative;
+    
+        &:hover {
+            scale: 1.1;
+        }
+    
+        img {
+            display: block;
+            width: 100%;
+            transition: all 0.5s;
+        }
+    
+        &:hover img {
+            box-shadow: 0 0 50px $main-background;
+        }
+    
+        figcaption {
+            color: white;
+            text-transform: uppercase;
+            font-size: 10px;
+            background-color: $secondary-background;
+            padding-top: 1rem;
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            top: 70%;
+            bottom: 1rem;
+            transition: all 0.5s;
+        }
+    
+    }
+}

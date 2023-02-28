@@ -1,0 +1,88 @@
+footer {
+    height: 550px;
+
+    .footer-top {
+        height: calc(100% - 100px);
+        background-image: url(../img/footer-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2rem 0;
+
+        .container {
+            height: 100%;
+            @include flex(row, space-between, center);
+
+        }
+
+        nav {
+            max-height: 100%;
+            @include flex(column);
+            flex-wrap: wrap;
+
+            .link-section {
+                margin: 0.5rem 1rem;
+            }
+
+            h3 {
+                color: white;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+            }
+
+            a {
+                color: $lightgray;
+                transition: all 0.5s;
+                font-size: 14px;
+
+                &:hover {
+                    color: white;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        img {
+            height: 150%;
+            width: auto;
+        }
+    }
+
+    .footer-bottom {
+        height: 100px;
+        background-color: $gray;
+        position: relative;
+        z-index: 1;
+
+        nav {
+            height: 100%;
+            @include flex(row, space-between, center);
+
+            .nav-right {
+                @include flex(row, space-between, center);
+                gap: 1.5rem;
+
+                span {
+                    color: $main-background;
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+
+                ul {
+                    display: flex;
+                    gap: 1rem;
+
+                    a {
+                        transition: filter 0.5s;
+
+                        &:hover {
+                            filter: brightness(200%);
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}

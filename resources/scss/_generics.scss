@@ -1,0 +1,53 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+main {
+    position: relative;
+    background-color: white;
+    z-index: 1;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+button {
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.5s;
+
+    &.primary {
+        padding: 0.5rem 3rem;
+        color: white;
+        background-color: $main-background;
+        border-color: transparent;
+
+        &:hover {
+            filter: brightness(150%);
+        }
+
+        &.outline {
+            padding: 1rem;
+            background-color: transparent;
+            border: 2px solid $main-background;
+
+            &:hover {
+                background-color: $main-background;
+                filter: brightness(100%);
+            }
+        }
+
+
+    }
+
+
+}
