@@ -1,4 +1,6 @@
 <figure class="card">
-    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
-    <figcaption>{{ $comic['title'] }}</figcaption>
+    <a href="{{ Route('comics.show', $comic) }}">
+        <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+        <figcaption>{{ $comic->title }}</figcaption>
+    </a>
 </figure>

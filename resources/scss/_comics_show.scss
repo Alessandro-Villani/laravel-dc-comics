@@ -1,0 +1,61 @@
+.comic {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+
+    .comic-top {
+        height: 40px;
+        background-color: $main-background;
+        position: relative;
+
+        img {
+            width: 160px;
+            position: absolute;
+            bottom: 20px;
+        }
+    }
+
+    .comic-body {
+        .price {
+            color: white;
+            box-shadow: 0 2px 2px gray;
+
+            .col-4 {
+                background-color: $success;
+
+                &:last-child {
+                    border-left: 1px solid gray;
+                }
+
+                span {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        p {
+            line-height: 24px;
+        }
+    }
+
+    .comic-bottom {
+        background-color: $details-background;
+
+        .info {
+            border-bottom: 1px solid gray;
+            font-size: 14px;
+
+            &.top {
+                border-top: 1px solid gray;
+            }
+        }
+
+        .col-8 {
+            color: $main-background;
+
+            &.text-dark {
+                color: black;
+            }
+        }
+    }
+}

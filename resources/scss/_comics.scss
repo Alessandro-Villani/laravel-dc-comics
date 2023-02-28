@@ -30,7 +30,6 @@
 
     .card {
         flex-basis: calc(100% / 6);
-
     }
 
     figure {
@@ -38,21 +37,21 @@
         cursor: pointer;
         transition: all 0.5s;
         position: relative;
-    
+
         &:hover {
             scale: 1.1;
         }
-    
+
         img {
             display: block;
             width: 100%;
             transition: all 0.5s;
         }
-    
+
         &:hover img {
             box-shadow: 0 0 50px $main-background;
         }
-    
+
         figcaption {
             color: white;
             text-transform: uppercase;
@@ -66,6 +65,5 @@
             bottom: 1rem;
             transition: all 0.5s;
         }
-    
     }
 }

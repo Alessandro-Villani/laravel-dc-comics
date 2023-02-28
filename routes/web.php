@@ -22,6 +22,8 @@ Route::get('/characters', [PageController::class, 'characters'])->name('characte
 
 Route::get('/comics', [ComicsController::class, 'index'])->name('comics');
 
+Route::get('/comics/{comic}', [ComicsController::class, 'show'])->name('comics.show');
+
 Route::get('/movies', [PageController::class, 'movies'])->name('movies');
 
 Route::get('/tv', [PageController::class, 'tv'])->name('tv');

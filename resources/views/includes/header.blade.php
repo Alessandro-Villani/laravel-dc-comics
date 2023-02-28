@@ -15,7 +15,7 @@
             <nav class="h-100">
                 <ul class="h-100">
                     @foreach ( $menus as $menu )
-                        <li class="me-3 h-100 {{ Route::is($menu) ? 'active' : '' }}"><a class="h-100" href="{{route($menu)}}">{{ strtoupper($menu) }}</a></li>                        
+                        <li class="me-3 h-100 {{ request()->routeIs("$menu*") ? 'active' : '' }}"><a class="h-100" href="{{route($menu)}}">{{ strtoupper($menu) }}</a></li>                        
                     @endforeach
                 </ul>
             </nav>
