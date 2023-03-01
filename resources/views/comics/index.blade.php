@@ -11,7 +11,10 @@
                 @include('includes.product_card')
             @endforeach
         </div>
-        <button class="primary">LOAD MORE</button>
+        <div class="d-flex justify-content-center">
+            <button class="primary me-3">LOAD MORE</button>
+            <a class="button success" href="{{ route('comics.create') }}">+</a>
+        </div>
     </div>
 </main>
 @endsection

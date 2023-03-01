@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ComicsController;
+use App\Http\Controllers\ComicController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,10 +20,6 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('/characters', [PageController::class, 'characters'])->name('characters');
 
-Route::get('/comics', [ComicsController::class, 'index'])->name('comics');
-
-Route::get('/comics/{comic}', [ComicsController::class, 'show'])->name('comics.show');
-
 Route::get('/movies', [PageController::class, 'movies'])->name('movies');
 
 Route::get('/tv', [PageController::class, 'tv'])->name('tv');
@@ -39,3 +35,15 @@ Route::get('/fans', [PageController::class, 'fans'])->name('fans');
 Route::get('/news', [PageController::class, 'news'])->name('news');
 
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
+
+//Comics Routes
+
+//Get index
+Route::get('/comics', [ComicController::class, 'index'])->name('comics');
+
+//Get create
+
+Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
+
+//Get details
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
