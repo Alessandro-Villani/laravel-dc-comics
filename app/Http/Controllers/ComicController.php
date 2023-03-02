@@ -127,6 +127,6 @@ class ComicController extends Controller
     {
         $comic->delete();
 
-        return to_route('comics');
+        return to_route('comics')->with('message', "Il fumetto $comic->title è stato eliminato con successo");
     }
 }
