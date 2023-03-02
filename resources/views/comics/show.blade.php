@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="comic-bottom">
-            <div class="container p-4 d-flex">
-                <div class="col-6 p-2">
+            <div class="container p-4 d-flex flex-wrap">
+                <div class="col-6 p-2 mb-5">
                     <h3 class="mb-3">Talent</h3>
                     <div class="info top py-2 d-flex">
                         <div class="col-4">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 p-2">
+                <div class="col-6 p-2 mb-5">
                     <h3 class="mb-3">Specs</h3>
                     <div class="info top py-2 d-flex">
                         <div class="col-4">
@@ -74,7 +74,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <a class="button primary me-3" href="{{ route('comics.edit', $comic->id)}}">Modifica</a>
+                    <button class="danger">Elimina</button>
+                </div>
             </div>
+            
         </div>
 
     </section>

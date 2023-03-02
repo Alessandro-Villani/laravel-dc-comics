@@ -21,6 +21,7 @@ main {
 
 button,
 .button {
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
@@ -53,6 +54,17 @@ button,
         padding: 0.5rem 1rem;
         color: white;
         background-color: $success;
+        border-color: transparent;
+
+        &:hover {
+            filter: brightness(150%);
+        }
+    }
+
+    &.danger {
+        padding: 0.5rem 3rem;
+        color: white;
+        background-color: $danger-dark;
         border-color: transparent;
 
         &:hover {
