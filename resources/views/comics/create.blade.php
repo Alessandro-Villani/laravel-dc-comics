@@ -38,7 +38,7 @@
         </div>
         <div class="col-4 d-flex flex-column align-items-center mb-3">
             <label class="mb-1" for="price">Prezzo</label>
-            <input class="p-2 text-center" type="number" step="0.01" min="0" max="9999" id='price' name="price" value="0" value="{{ old('price') }}">
+            <input class="p-2 text-center" type="number" step="0.01" min="0" max="9999" id='price' name="price" value="{{ old('price', 0) }}">
         </div>
         <div class="col-12 d-flex flex-column align-items-center mb-3 p-3">
             <label class="mb-1" for="description">Descrizione</label>

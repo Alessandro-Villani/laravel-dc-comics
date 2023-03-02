@@ -36,30 +36,37 @@
             display: block;
             color: white;
             text-decoration: none;
+        }
 
-            &.button {
-                position: absolute;
-                bottom: 80px;
-                padding: 0.25rem;
-                border-radius: 5px;
-                text-align: center;
-                font-size: 16px;
-                opacity: 0;
-                transition: all 0.5s;
+        .button,
+        form {
+            position: absolute;
+            bottom: 80px;
+            padding: 0.25rem;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 12px;
+            opacity: 0;
+            transition: all 0.5s;
 
-                &.edit {
-                    background-color: $main-background;
-                    left: 20px;
-                }
+            &.edit {
+                background-color: $main-background;
+                left: 20px;
+            }
 
-                &.delete {
-                    background-color: $danger-dark;
-                    right: 20px;
-                }
+            &.delete {
+                background-color: $danger-dark;
+                right: 20px;
+            }
 
-                &:hover {
-                    filter: brightness(1.5);
-                }
+            button {
+                background-color: $danger-dark;
+                color: white;
+                border: none;
+            }
+
+            &:hover {
+                filter: brightness(1.5);
             }
         }
     }
