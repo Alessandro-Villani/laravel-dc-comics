@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ComicController extends Controller
 {
@@ -84,9 +85,39 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $request->validate([
+            'title' => ['required', 'string', Rule::unique('comics')->ignore($comic->id)],
+            'description' => 'nullable|string',
+            'thumb' => 'nullable|url',
+            'price' => 'required|numeric|min:0|max:9999',
+            'series' => 'required|string',
+            'sale_date' => 'required|date',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string'
+        ], [
+            'title.required' => 'Il campo titolo è obbligatorio',
+            'title.unique' => 'Il titolo è già stato inserito',
+            'thumb.url' => 'È necessario inserire un URL valido',
+            'price.required' => 'Il campo prezzo è obbligatorio',
+            'price.numeric' => 'Il prezzo deve essere un valore numerico',
+            'price.min' => 'Il prezzo minimo deve essere :min',
+            'price.max' => 'Il prezzo massimo deve essere :max',
+            'series.required' => 'Il campo Serie è obbligatorio',
+            'sale_date.required' => 'Il campo Data di pubblicazione è obbligatorio',
+            'sale_date.date' => 'È necessario inserire una data valida',
+            'type.required' => 'Il campo Tipo è obbligatorio',
+            'artists.required' => 'Il campo Artisti è obbligatorio',
+            'writers.required' => 'Il campo writers è obbligatorio'
+        ]);
+
+        $data = $request->all();
+        $comic->fill($data);
+        $comic->save();
+
+        return to_route('comics.show', $comic->id);
     }
 
     /**

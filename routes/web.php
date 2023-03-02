@@ -55,3 +55,7 @@ Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.sh
 //Get comic edit page
 
 Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
+
+//Put edited comic
+
+Route::put('comics/{comic}', [ComicController::class, 'update'])->name('comics.update');

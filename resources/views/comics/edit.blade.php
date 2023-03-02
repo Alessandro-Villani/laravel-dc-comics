@@ -14,7 +14,7 @@
             </ul>
         </div>
     @endif
-    <form class="container d-flex flex-wrap" method="POST" action="{{--{{ route('comics.store') }}--}}">
+    <form class="container d-flex flex-wrap" method="POST" action="{{ route('comics.update', $comic->id) }}">
         @method('PUT')
         @csrf
         <div class="col-4 d-flex flex-column align-items-center mb-3">
@@ -39,7 +39,7 @@
         </div>
         <div class="col-4 d-flex flex-column align-items-center mb-3">
             <label class="mb-1" for="price">Prezzo</label>
-            <input class="p-2 text-center" type="number" step="0.01" min="0" max="9999" id='price' name="price" value="0" value="{{ old('price', $comic->price) }}">
+            <input class="p-2 text-center" type="number" step="0.01" min="0" max="9999" id='price' name="price" value="{{ old('price', $comic->price) }}">
         </div>
         <div class="col-12 d-flex flex-column align-items-center mb-3 p-3">
             <label class="mb-1" for="description">Descrizione</label>
